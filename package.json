@@ -4,12 +4,21 @@
   "description": "Backend services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/static": "^6.6.0",
+    "@fastify/view": "^7.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fastify": "^4.11.0",
+    "handlebars": "^4.7.7",
+    "mongodb": "^5.0.1",
+    "pug": "^3.0.2",
+    "body-parser": "^1.20.2"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^5.1.0"
-  }
+  "license": "ISC"
 }
