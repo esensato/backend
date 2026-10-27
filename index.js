@@ -1,4 +1,5 @@
 const express = require("express");
+const comentarios = require("./comentarios");
 
 const app = express();
 
