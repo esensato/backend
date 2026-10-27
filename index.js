@@ -6,6 +6,20 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
+app.get("/comentarios", (req, res) => {
+    const indiceAleatorio = Math.floor(
+        Math.random() * comentarios.length
+    );
+
+    const selecionado = comentarios[indiceAleatorio];
+
+    // Não enviar o rótulo do sentimento para o analisador.
+    res.json({
+        id: selecionado.id,
+        comentario: selecionado.comentario
+    });
+});
+
 app.post("/token-cloudant", async (req, res) => {
     try {
         const { apikey } = req.body;
